@@ -9,6 +9,8 @@
 #import "SmRoundView.h"
 #import "WHC_NavigationController.h"
 
+
+NSInteger count;
 @implementation SmRoundView
 
 /*
@@ -69,7 +71,6 @@
     
     if ([self pointInside:p1 withEvent:event]) {
         WHC_NavigationController *nav = (WHC_NavigationController*)[self viewController].navigationController;
-        NSLog(@"______");
 
         nav.panGesture.enabled = YES;
     }
@@ -127,7 +128,7 @@
     
     CGFloat btnW = 2 * M_PI * 100 /60;
     
-    static NSInteger count = 0 ;
+     count = 0 ;
     if (count == 0) {
         
         _btnArray = [[NSMutableArray alloc]init];
