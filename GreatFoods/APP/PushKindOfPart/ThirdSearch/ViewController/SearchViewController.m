@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "CustomSearchBar.h"
 
 @interface SearchViewController ()
 <UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,UISearchResultsUpdating>
@@ -16,6 +17,7 @@
 
 @property(nonatomic,retain)NSMutableArray *dataList;
 @property(nonatomic,retain)NSMutableArray *searchList;
+
 
 @end
 
@@ -36,10 +38,9 @@
     self.dataList   = [NSMutableArray new];
 
     
-    [self buildSearch];
+    [self buildCustomSearch];
     
-    
-    
+//    [self buildSearch];
 }
 
 
@@ -54,21 +55,33 @@
 
 
 
-
-
-
+- (void) buildCustomSearch
+{
+    //image
+    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_width * (3.0/4.0))];
+    image.contentMode  = UIViewContentModeScaleAspectFill;
+    [image setImage:[UIImage imageNamed:@"background-6"]];
+    [self.view addSubview:image];
+    
+    //search
+    CustomSearchBar *search = [[CustomSearchBar alloc]initWithFrame:CGRectMake(40, 200, screen_width - 80, 40)];
+    [search getBlockFromOutSpace:^(NSString *str) {
+        NSLog(@"%@",str);
+    }];
+    [self.view addSubview:search];
+}
 
 
 
 #pragma mark- 创建搜索
 
 -(void)buildSearch{
-    self.tableView            = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView            = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
     self.tableView.delegate   = self;
     self.tableView.dataSource = self;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.rowHeight = 80;
-    
+    self.tableView.bounces = NO;
     self.tableView.alpha = 0;
     
 #pragma mark- 创建搜索框
@@ -85,12 +98,13 @@
     
     self.definesPresentationContext = YES;
 //    
-    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);;
+    self.searchController.searchBar.frame = CGRectMake(0, 0, screen_width, 44.0);;
+    self.searchController.searchBar.alpha = 0;
     
-    
-    self.tableView.tableHeaderView = self.searchController.searchBar;
+//    self.tableView.tableHeaderView = self.searchController.searchBar;
     
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.searchController.searchBar];
 }
 
 

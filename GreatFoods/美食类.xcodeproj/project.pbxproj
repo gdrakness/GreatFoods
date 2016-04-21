@@ -23,6 +23,8 @@
 		F5559CFF1CC8AB9D00379BF0 /* BreakFastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559CFD1CC8AB9D00379BF0 /* BreakFastViewController.xib */; };
 		F5559D031CC8ABB200379BF0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559D011CC8ABB200379BF0 /* MineViewController.m */; };
 		F5559D041CC8ABB200379BF0 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559D021CC8ABB200379BF0 /* MineViewController.xib */; };
+		F5559D0A1CC8B4E300379BF0 /* CustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559D071CC8B4E300379BF0 /* CustomSearchBar.m */; };
+		F5559D0B1CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559D091CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m */; };
 		F5B289D71CC4F7B400ECF016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B289D61CC4F7B400ECF016 /* main.m */; };
 		F5B289DA1CC4F7B400ECF016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B289D91CC4F7B400ECF016 /* AppDelegate.m */; };
 		F5B289E21CC4F7B400ECF016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B289E11CC4F7B400ECF016 /* Assets.xcassets */; };
@@ -90,6 +92,10 @@
 		F5559D001CC8ABB200379BF0 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		F5559D011CC8ABB200379BF0 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		F5559D021CC8ABB200379BF0 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		F5559D061CC8B4E300379BF0 /* CustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchBar.h; sourceTree = "<group>"; };
+		F5559D071CC8B4E300379BF0 /* CustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBar.m; sourceTree = "<group>"; };
+		F5559D081CC8B4E300379BF0 /* UIView+ModifyAttributeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModifyAttributeValue.h"; sourceTree = "<group>"; };
+		F5559D091CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModifyAttributeValue.m"; sourceTree = "<group>"; };
 		F5B289D21CC4F7B400ECF016 /* 美食类.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "美食类.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B289D61CC4F7B400ECF016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5B289D81CC4F7B400ECF016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,6 +224,17 @@
 				F52BB8DC1CC65797000B8577 /* DayDescriptionData.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F5559D051CC8B4C200379BF0 /* CustomSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				F5559D061CC8B4E300379BF0 /* CustomSearchBar.h */,
+				F5559D071CC8B4E300379BF0 /* CustomSearchBar.m */,
+				F5559D081CC8B4E300379BF0 /* UIView+ModifyAttributeValue.h */,
+				F5559D091CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m */,
+			);
+			path = CustomSearchBar;
 			sourceTree = "<group>";
 		};
 		F5B289C91CC4F7B400ECF016 = {
@@ -435,6 +452,7 @@
 		F5D97C4C1CC7AC060034099A /* ThirdSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F5559D051CC8B4C200379BF0 /* CustomSearchBar */,
 				F5D97C4D1CC7AC2B0034099A /* ViewController */,
 			);
 			path = ThirdSearch;
@@ -674,9 +692,11 @@
 				F5B28A1F1CC5004F00ECF016 /* WHC_NavigationController.m in Sources */,
 				F52BB8D01CC61C03000B8577 /* DaydayCookData.m in Sources */,
 				F5D97C531CC7ACAB0034099A /* SearchViewController.m in Sources */,
+				F5559D0A1CC8B4E300379BF0 /* CustomSearchBar.m in Sources */,
 				F5559D031CC8ABB200379BF0 /* MineViewController.m in Sources */,
 				F5B28A171CC4FED100ECF016 /* DaydayHome.m in Sources */,
 				F5D97C581CC7B3840034099A /* Loading.m in Sources */,
+				F5559D0B1CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m in Sources */,
 				F5B28A0E1CC4F89300ECF016 /* ViewController.m in Sources */,
 				F52BB8CF1CC61C03000B8577 /* DaydayCookBaseClass.m in Sources */,
 				F5B28A1B1CC4FF2B00ECF016 /* DDCLoopLayout.m in Sources */,
