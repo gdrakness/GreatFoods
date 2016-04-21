@@ -64,7 +64,7 @@
     [self.view addSubview:image];
     
     //search
-    CustomSearchBar *search = [[CustomSearchBar alloc]initWithFrame:CGRectMake(40, 200, screen_width - 80, 40)];
+    CustomSearchBar *search = [[CustomSearchBar alloc]initWithFrame:CGRectMake(40, screen_width * 0.55, screen_width - 80, 40)];
     [search getBlockFromOutSpace:^(NSString *str) {
         NSLog(@"%@",str);
     }];

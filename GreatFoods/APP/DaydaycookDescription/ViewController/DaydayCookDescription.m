@@ -52,7 +52,10 @@
     
 //    self.webView.delegate = self;
     
-    [self getData];
+    dispatch_async(dispatch_queue_create("discription", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+        
+        [self getData];
+    });
     self.webView.scrollView.contentInset    = UIEdgeInsetsMake(screen_width + 100, 0, 0, 0);
     self.webView.scrollView.backgroundColor = RGB(245, 245, 245);
     [self buildImageAndLabel];
@@ -120,7 +123,7 @@
 #pragma mark- 获取数据
 
 - (void)getData{
-    NSString *url =[NSString stringWithFormat:@"http://218.244.151.213/daydaycook/server/recipe/details.do?id=%ld&username=&password=",self.BookID];
+    NSString *url =[NSString stringWithFormat:@"http://218.244.151.213/daydaycook/server/recipe/details.do?id=%ld&username=&password=",(long)self.BookID];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     [manager POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -128,6 +131,8 @@
         if ([responseObject[@"msg"] isEqualToString:@"成功"]) {
             
             DayDescriptionData *model = [DayDescriptionData modelObjectWithDictionary:responseObject[@"data"]];
+            
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 

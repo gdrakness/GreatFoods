@@ -8,6 +8,7 @@
 #import "DaydayCookData.h"
 
 
+
 NSString *const kDaydayCookDataClickCount = @"clickCount";
 NSString *const kDaydayCookDataDetailsUrl = @"detailsUrl";
 NSString *const kDaydayCookDataDifficulty = @"difficulty";
@@ -298,6 +299,8 @@ NSString *const kDaydayCookDataDisplayState = @"displayState";
     [aCoder encodeObject:_title forKey:kDaydayCookDataTitle];
     [aCoder encodeObject:_displayState forKey:kDaydayCookDataDisplayState];
 }
+
+
 
 - (id)copyWithZone:(NSZone *)zone
 {

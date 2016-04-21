@@ -125,7 +125,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
                 weakSelf.smRoundView.minProgress = minutes / 60.0;
-                weakSelf.minutesLabel.text = [NSString stringWithFormat:@"%ld",minutes];
+                weakSelf.minutesLabel.text = [NSString stringWithFormat:@"%ld",(long)minutes];
                 
                 if (seconds % 5 == 0) {
                     UIColor *color = [UIColor colorWithRed:(arc4random()%255)/255. green:(arc4random()%255)/255. blue:(arc4random()%255)/255. alpha:1];
@@ -150,7 +150,7 @@
                 //怎么解决,一定要在后面再次调用get方法才行
                 //                NSLog(@"%@",weakSelf.minutesLabel);
                 
-                weakSelf.secondsLabel.text = [NSString stringWithFormat:@"%ld",seconds];
+                weakSelf.secondsLabel.text = [NSString stringWithFormat:@"%ld",(long)seconds];
                 if ([weakSelf.secondsLabel.text integerValue] < 10) {
                     weakSelf.secondsLabel.text = [NSString stringWithFormat:@"0%@",weakSelf.secondsLabel.text];
                 }
@@ -186,7 +186,7 @@
     [self.stopBtn setTitle:@"继续" forState:UIControlStateSelected];
     self.smRoundView.minBlock = ^(NSInteger min){
         
-        self.countLabel.text = [NSString stringWithFormat:@"%ld",min];
+        self.countLabel.text = [NSString stringWithFormat:@"%ld",(long)min];
     };
     UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.countLabel.bounds.size.width, self.countLabel.bounds.size.height)];
     button.center = self.view.center;
@@ -207,7 +207,7 @@
 -(void)btnAction{
     NSInteger min = [self.countLabel.text integerValue];
     min ++ ;
-    self.countLabel.text = [NSString stringWithFormat:@"%ld",min];
+    self.countLabel.text = [NSString stringWithFormat:@"%ld",(long)min];
     if (min / 60 <= 1) {
         self.smRoundView.minProgress = min / 60.0;
     }

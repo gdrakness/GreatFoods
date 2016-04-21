@@ -14,11 +14,14 @@
 #import "DDCLoopLayout.h"
 
 #import <AFNetworking.h>
+#import <UIView+SDAutoLayout.h>
 #import <UIScrollView+JElasticPullToRefresh.h>
 @interface DaydayHome () <UICollectionViewDataSource,UICollectionViewDelegate>
 {
     NSInteger isRefreshCount;//记录刷新次数
     DDPushList *PushListView;//导航菜单
+    
+    UIButton *backtoTop;
 }
 @property (retain, nonatomic) UICollectionView *DaydayCollecionView;
 @property (weak, nonatomic) IBOutlet UIButton *ListButton;//推出按钮
@@ -95,6 +98,9 @@
 
     #pragma mark- 调用创建退出窗口方法
     [self buildPushListView];
+    
+    #pragma mark- 回顶部按钮创建
+    [self backToTop];
 }
 
 
@@ -124,6 +130,7 @@
     
     static NSString *cellid = @"daydayhome";
     DDCollectCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellid forIndexPath:indexPath];
+    
     
     DaydayCookData *model = self.DDdataArray[indexPath.item];
     [cell getModel:model];
@@ -163,9 +170,40 @@
     /*  */
 //    NSLog(@"%f = %lu",scrollView.contentOffset.y / 180,self.DDdataArray.count - 5 );
     if (scrollView.contentOffset.y / 180  > self.DDdataArray.count - 10 ) {
-        [self DayDayCookHomeDataIFRefresh:YES];
+        #pragma mark- 异步请求数据(节省性能,很多)
+        dispatch_async(dispatch_queue_create("new", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+            
+            [self DayDayCookHomeDataIFRefresh:YES];
+        });
     }//减速判定是否刷新页面
 }
+
+//按钮出现
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (decelerate) {
+        
+        if (scrollView.contentOffset.y > screen_height / 2 && scrollView.contentOffset.y < screen_height * 1.8) {
+            [UIView animateWithDuration:.5 animations:^{
+                backtoTop.alpha = 1;
+                backtoTop.tag = 1;//有动画
+            }];
+        }
+        if (scrollView.contentOffset.y > screen_height * 1.8) {
+            backtoTop.alpha = 1;
+            backtoTop.tag = 0;//无动画
+        }
+        
+        //按钮消失
+        if (scrollView.contentOffset.y < screen_height/2) {
+            [UIView animateWithDuration:.5 animations:^{
+                backtoTop.alpha = 0;
+            }];
+        }
+    }
+}
+
 
 
 
@@ -207,6 +245,10 @@
     [UIView animateWithDuration:1 animations:^{
         
         sender.alpha = 0;
+        if (backtoTop.alpha == 1) {
+            backtoTop.alpha = 0;
+        }
+        
         [self.navigationController.navigationBar setAlpha:0];
         self.navigationController.navigationBar.transform = CGAffineTransformTranslate(self.navigationController.navigationBar.transform, 0, -64);//向上移动
     }];
@@ -231,6 +273,10 @@
         //navBar下移
         [UIView animateWithDuration:.3 animations:^{
             self.ListButton.alpha = 1;
+            if (backtoTop.tag != 0 && backtoTop.tag != 1) {
+                backtoTop.alpha = 1;
+            }
+            
             [self.navigationController.navigationBar setAlpha:1];
         } completion:^(BOOL finished) {
             [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;//状态栏
@@ -281,6 +327,9 @@
 
 
 
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -311,6 +360,50 @@
     [self.DaydayCollecionView removeJElasticPullToRefreshView];
     NSLog(@"释放~");
 }
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark- 按钮回到顶部
+
+-(void) backToTop
+{
+    backtoTop = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:backtoTop];
+    [self.view bringSubviewToFront:backtoTop];
+    
+    backtoTop.sd_layout.bottomSpaceToView(self.view,35).rightSpaceToView(self.view,25).widthIs(50).heightEqualToWidth();
+    [backtoTop setTitle:@"Back" forState:UIControlStateNormal];
+    backtoTop.titleLabel.font = [UIFont fontWithName:@"Zapfino" size:15];
+    
+//    [backtoTop setImage:[UIImage imageNamed:@"top"] forState:UIControlStateNormal];
+    backtoTop.titleLabel.textColor = [UIColor whiteColor];
+    
+    backtoTop.alpha = 0;
+    [backtoTop addTarget:self action:@selector(totop:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void) totop:(UIButton *)sender
+{
+    if (sender.tag == 0) {
+        [self.DaydayCollecionView setContentOffset:CGPointZero animated:NO]; //无动画
+    }else{
+        
+        [self.DaydayCollecionView setContentOffset:CGPointZero animated:YES]; //1有动画
+    }
+    //置顶后按钮消失
+    [UIView animateWithDuration:.5 animations:^{
+        backtoTop.alpha = 0;
+    }];
+}
+
 /*
 #pragma mark - Navigation
 

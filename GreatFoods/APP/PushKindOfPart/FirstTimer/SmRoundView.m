@@ -13,6 +13,9 @@
 NSInteger count;
 @implementation SmRoundView
 
+-(void)awakeFromNib{
+    count = 0 ;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -128,7 +131,7 @@ NSInteger count;
     
     CGFloat btnW = 2 * M_PI * 100 /60;
     
-     count = 0 ;
+    
     if (count == 0) {
         
         _btnArray = [[NSMutableArray alloc]init];
