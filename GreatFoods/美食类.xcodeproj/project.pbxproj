@@ -17,6 +17,12 @@
 		F52BB8D71CC6564A000B8577 /* DaydayCookDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52BB8D51CC6564A000B8577 /* DaydayCookDescription.xib */; };
 		F52BB8DD1CC65797000B8577 /* DayDescriptionBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BB8DA1CC65797000B8577 /* DayDescriptionBaseClass.m */; };
 		F52BB8DE1CC65797000B8577 /* DayDescriptionData.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BB8DC1CC65797000B8577 /* DayDescriptionData.m */; };
+		F5559CF91CC8AB8E00379BF0 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559CF71CC8AB8E00379BF0 /* TimerViewController.m */; };
+		F5559CFA1CC8AB8E00379BF0 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559CF81CC8AB8E00379BF0 /* TimerViewController.xib */; };
+		F5559CFE1CC8AB9D00379BF0 /* BreakFastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559CFC1CC8AB9D00379BF0 /* BreakFastViewController.m */; };
+		F5559CFF1CC8AB9D00379BF0 /* BreakFastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559CFD1CC8AB9D00379BF0 /* BreakFastViewController.xib */; };
+		F5559D031CC8ABB200379BF0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559D011CC8ABB200379BF0 /* MineViewController.m */; };
+		F5559D041CC8ABB200379BF0 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559D021CC8ABB200379BF0 /* MineViewController.xib */; };
 		F5B289D71CC4F7B400ECF016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B289D61CC4F7B400ECF016 /* main.m */; };
 		F5B289DA1CC4F7B400ECF016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B289D91CC4F7B400ECF016 /* AppDelegate.m */; };
 		F5B289E21CC4F7B400ECF016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B289E11CC4F7B400ECF016 /* Assets.xcassets */; };
@@ -75,6 +81,15 @@
 		F52BB8DA1CC65797000B8577 /* DayDescriptionBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayDescriptionBaseClass.m; sourceTree = "<group>"; };
 		F52BB8DB1CC65797000B8577 /* DayDescriptionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayDescriptionData.h; sourceTree = "<group>"; };
 		F52BB8DC1CC65797000B8577 /* DayDescriptionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayDescriptionData.m; sourceTree = "<group>"; };
+		F5559CF61CC8AB8E00379BF0 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		F5559CF71CC8AB8E00379BF0 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		F5559CF81CC8AB8E00379BF0 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+		F5559CFB1CC8AB9D00379BF0 /* BreakFastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakFastViewController.h; sourceTree = "<group>"; };
+		F5559CFC1CC8AB9D00379BF0 /* BreakFastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakFastViewController.m; sourceTree = "<group>"; };
+		F5559CFD1CC8AB9D00379BF0 /* BreakFastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreakFastViewController.xib; sourceTree = "<group>"; };
+		F5559D001CC8ABB200379BF0 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F5559D011CC8ABB200379BF0 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F5559D021CC8ABB200379BF0 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		F5B289D21CC4F7B400ECF016 /* 美食类.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "美食类.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B289D61CC4F7B400ECF016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5B289D81CC4F7B400ECF016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -392,6 +407,9 @@
 		F5D97C491CC7ABC30034099A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5559CF61CC8AB8E00379BF0 /* TimerViewController.h */,
+				F5559CF71CC8AB8E00379BF0 /* TimerViewController.m */,
+				F5559CF81CC8AB8E00379BF0 /* TimerViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -407,6 +425,9 @@
 		F5D97C4B1CC7ABF00034099A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5559CFB1CC8AB9D00379BF0 /* BreakFastViewController.h */,
+				F5559CFC1CC8AB9D00379BF0 /* BreakFastViewController.m */,
+				F5559CFD1CC8AB9D00379BF0 /* BreakFastViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -440,6 +461,9 @@
 		F5D97C4F1CC7AC610034099A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5559D001CC8ABB200379BF0 /* MineViewController.h */,
+				F5559D011CC8ABB200379BF0 /* MineViewController.m */,
+				F5559D021CC8ABB200379BF0 /* MineViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -560,7 +584,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5559CFA1CC8AB8E00379BF0 /* TimerViewController.xib in Resources */,
 				F5B289E51CC4F7B400ECF016 /* LaunchScreen.storyboard in Resources */,
+				F5559D041CC8ABB200379BF0 /* MineViewController.xib in Resources */,
+				F5559CFF1CC8AB9D00379BF0 /* BreakFastViewController.xib in Resources */,
 				F5B28A2D1CC525BB00ECF016 /* DDCollectCell.xib in Resources */,
 				F5B28A271CC5253E00ECF016 /* Images.xcassets in Resources */,
 				F52BB8D71CC6564A000B8577 /* DaydayCookDescription.xib in Resources */,
@@ -647,11 +674,14 @@
 				F5B28A1F1CC5004F00ECF016 /* WHC_NavigationController.m in Sources */,
 				F52BB8D01CC61C03000B8577 /* DaydayCookData.m in Sources */,
 				F5D97C531CC7ACAB0034099A /* SearchViewController.m in Sources */,
+				F5559D031CC8ABB200379BF0 /* MineViewController.m in Sources */,
 				F5B28A171CC4FED100ECF016 /* DaydayHome.m in Sources */,
 				F5D97C581CC7B3840034099A /* Loading.m in Sources */,
 				F5B28A0E1CC4F89300ECF016 /* ViewController.m in Sources */,
 				F52BB8CF1CC61C03000B8577 /* DaydayCookBaseClass.m in Sources */,
 				F5B28A1B1CC4FF2B00ECF016 /* DDCLoopLayout.m in Sources */,
+				F5559CFE1CC8AB9D00379BF0 /* BreakFastViewController.m in Sources */,
+				F5559CF91CC8AB8E00379BF0 /* TimerViewController.m in Sources */,
 				F52BB8DE1CC65797000B8577 /* DayDescriptionData.m in Sources */,
 				F52BB8C81CC6115A000B8577 /* NETManager.m in Sources */,
 				F52BB8BE1CC5CAFB000B8577 /* DDPushList.m in Sources */,
