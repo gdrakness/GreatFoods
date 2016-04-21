@@ -8,7 +8,7 @@
 
 #import "DDPushList.h"
 #import "SearchViewController.h"
-
+#import "TimerViewController.h"
 @implementation DDPushList
 
 /*
@@ -23,7 +23,8 @@
 }
 
 - (IBAction)Time:(UIButton *)sender {
-    
+    TimerViewController *timerVc = [[TimerViewController alloc]init];
+    [[self viewController].navigationController pushViewController:timerVc animated:YES];
 }
 - (IBAction)breakfast:(UIButton *)sender {
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7513E4101CC8BA1500E0DC97 /* BigRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */; };
+		7513E4131CC8BA3A00E0DC97 /* SmRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */; };
+		7513E4161CC8BA8A00E0DC97 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4151CC8BA8A00E0DC97 /* PointView.m */; };
 		9E0CB5236EE33452699E17B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34D67C062B50611E9D9154 /* libPods.a */; };
 		F52BB8BE1CC5CAFB000B8577 /* DDPushList.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BB8BD1CC5CAFB000B8577 /* DDPushList.m */; };
 		F52BB8C01CC5CB0F000B8577 /* DDPushList.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52BB8BF1CC5CB0F000B8577 /* DDPushList.xib */; };
@@ -64,6 +67,12 @@
 
 /* Begin PBXFileReference section */
 		62FA1D13F8A65EDB1A6DC6B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7513E40E1CC8BA1500E0DC97 /* BigRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigRoundView.h; sourceTree = "<group>"; };
+		7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigRoundView.m; sourceTree = "<group>"; };
+		7513E4111CC8BA3A00E0DC97 /* SmRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmRoundView.h; sourceTree = "<group>"; };
+		7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmRoundView.m; sourceTree = "<group>"; };
+		7513E4141CC8BA8A00E0DC97 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
+		7513E4151CC8BA8A00E0DC97 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
 		9333AF356A4D342A18C9BA64 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ED34D67C062B50611E9D9154 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52BB8BC1CC5CAFB000B8577 /* DDPushList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPushList.h; sourceTree = "<group>"; };
@@ -417,6 +426,12 @@
 			isa = PBXGroup;
 			children = (
 				F5D97C491CC7ABC30034099A /* ViewController */,
+				7513E40E1CC8BA1500E0DC97 /* BigRoundView.h */,
+				7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */,
+				7513E4111CC8BA3A00E0DC97 /* SmRoundView.h */,
+				7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */,
+				7513E4141CC8BA8A00E0DC97 /* PointView.h */,
+				7513E4151CC8BA8A00E0DC97 /* PointView.m */,
 			);
 			path = FirstTimer;
 			sourceTree = "<group>";
@@ -685,10 +700,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7513E4101CC8BA1500E0DC97 /* BigRoundView.m in Sources */,
 				F52BB8DD1CC65797000B8577 /* DayDescriptionBaseClass.m in Sources */,
 				F5B28A2C1CC525BB00ECF016 /* DDCollectCell.m in Sources */,
 				F5B28A311CC52A9200ECF016 /* UIImage+Extended.m in Sources */,
 				F52BB8D61CC6564A000B8577 /* DaydayCookDescription.m in Sources */,
+				7513E4161CC8BA8A00E0DC97 /* PointView.m in Sources */,
 				F5B28A1F1CC5004F00ECF016 /* WHC_NavigationController.m in Sources */,
 				F52BB8D01CC61C03000B8577 /* DaydayCookData.m in Sources */,
 				F5D97C531CC7ACAB0034099A /* SearchViewController.m in Sources */,
@@ -701,6 +718,7 @@
 				F52BB8CF1CC61C03000B8577 /* DaydayCookBaseClass.m in Sources */,
 				F5B28A1B1CC4FF2B00ECF016 /* DDCLoopLayout.m in Sources */,
 				F5559CFE1CC8AB9D00379BF0 /* BreakFastViewController.m in Sources */,
+				7513E4131CC8BA3A00E0DC97 /* SmRoundView.m in Sources */,
 				F5559CF91CC8AB8E00379BF0 /* TimerViewController.m in Sources */,
 				F52BB8DE1CC65797000B8577 /* DayDescriptionData.m in Sources */,
 				F52BB8C81CC6115A000B8577 /* NETManager.m in Sources */,
@@ -843,7 +861,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/natsuhirofumi/Desktop/乱七八糟/美食类/Tools/Prefix/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lynsea/Desktop/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -862,7 +880,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/natsuhirofumi/Desktop/乱七八糟/美食类/Tools/Prefix/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lynsea/Desktop/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

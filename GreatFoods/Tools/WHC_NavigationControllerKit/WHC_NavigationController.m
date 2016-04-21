@@ -32,7 +32,6 @@
 
 #define MSN (wInterface) ((unsigned char *)&wInterface)[1]
 @interface WHC_NavigationController ()<UINavigationControllerDelegate>{
-    UIPanGestureRecognizer           *   _panGesture;
     CGFloat                              _currentTx;
     
     NSMutableArray                   *   _snapshootList;
@@ -107,6 +106,7 @@
             _panGesture = nil;
         }
     }
+    
 }
 
 #pragma mark - handleGesture
