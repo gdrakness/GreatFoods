@@ -21,7 +21,7 @@
 
 @implementation SearchViewController
 
-
+#pragma mark- 懒加载搜索数据
 -(NSMutableArray *)searchList{
     if (!_searchList) {
         _searchList = [NSMutableArray new];
@@ -36,11 +36,180 @@
     self.dataList   = [NSMutableArray new];
 
     
-    
+    [self buildSearch];
     
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark- 创建搜索
+
+-(void)buildSearch{
+    self.tableView            = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.delegate   = self;
+    self.tableView.dataSource = self;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.rowHeight = 80;
+    
+    self.tableView.alpha = 0;
+    
+#pragma mark- 创建搜索框
+    self.searchController                      = [[UISearchController alloc]initWithSearchResultsController:nil];
+    self.searchController.delegate             = self;
+    self.searchController.searchResultsUpdater = self;//代理
+    
+    //搜索时候背景变暗
+    self.searchController.dimsBackgroundDuringPresentation     = YES;
+    //搜索时模糊
+    self.searchController.obscuresBackgroundDuringPresentation = YES;
+    //隐藏导航栏
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    
+    self.definesPresentationContext = YES;
+//    
+    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);;
+    
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+    [self.view addSubview:self.tableView];
+}
+
+
+
+#pragma mark- 行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.searchController.active)
+    {
+        return self.searchList.count;
+    }else{
+        return self.dataList.count;
+    }
+}
+
+
+
+
+#pragma mark- tableviewCell
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *cellid      = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+    }
+    //
+    if (self.searchController.active)
+    {
+//        cell.textLabel.text = self.searchList[indexPath.row];
+    }else{
+//        cell.textLabel.text = self.dataList[indexPath.row];
+    }
+    
+    return cell;
+}
+
+
+
+
+
+
+
+#pragma mark- 更新数据
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    NSLog(@"updateSearchResultsForSearchController");
+    
+    NSString *searchStr = self.searchController.searchBar.text;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@",searchStr];
+    if (self.searchList != nil) {
+        [self.searchList removeAllObjects];
+    }
+    
+    //过滤数据
+    self.searchList = [NSMutableArray arrayWithArray:[self.dataList filteredArrayUsingPredicate:predicate]];
+    [self.tableView reloadData];
+}
+
+
+
+
+
+
+
+
+#pragma mark - UISearchControllerDelegate代理
+
+//测试UISearchController的执行过程
+
+- (void)willPresentSearchController:(UISearchController *)searchController
+{
+    NSLog(@"willPresentSearchController");
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController
+{
+    NSLog(@"didPresentSearchController");
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController
+{
+    NSLog(@"willDismissSearchController");
+}
+
+- (void)didDismissSearchController:(UISearchController *)searchController
+{
+    NSLog(@"didDismissSearchController");
+}
+
+- (void)presentSearchController:(UISearchController *)searchController
+{
+    NSLog(@"presentSearchController");
+}
+
+
+
+
+
+
+#pragma mark- 移除视图
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    if (self.searchController.active) {
+        self.searchController.active = NO;
+        [self.searchController.searchBar removeFromSuperview];
+    }
+}
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

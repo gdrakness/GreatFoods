@@ -59,7 +59,7 @@ static CGFloat const DDCViewLayoutDragHeight = 180.0f;
     return CGSizeMake([self width], contentHeight);
 }
 
-//不断使固定坐标失效(使可见的第一个cell永远是最大的size <280>)
+//不断使固定坐标失效(使可见的第一个cell永远是最大的size <280>) --当边界更改时是否更新布局
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return YES;
