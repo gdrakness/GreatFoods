@@ -26,6 +26,8 @@
 		F54BE89A1CC9B64F00C3FF67 /* IndexSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54BE8981CC9B64F00C3FF67 /* IndexSecondCell.xib */; };
 		F54BE89E1CC9B65E00C3FF67 /* IndexThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F54BE89C1CC9B65E00C3FF67 /* IndexThirdCell.m */; };
 		F54BE89F1CC9B65E00C3FF67 /* IndexThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54BE89D1CC9B65E00C3FF67 /* IndexThirdCell.xib */; };
+		F54BE8A41CC9D14900C3FF67 /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F54BE8A21CC9D14900C3FF67 /* searchCell.m */; };
+		F54BE8A51CC9D14900C3FF67 /* searchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54BE8A31CC9D14900C3FF67 /* searchCell.xib */; };
 		F5559CF91CC8AB8E00379BF0 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559CF71CC8AB8E00379BF0 /* TimerViewController.m */; };
 		F5559CFA1CC8AB8E00379BF0 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5559CF81CC8AB8E00379BF0 /* TimerViewController.xib */; };
 		F5559CFE1CC8AB9D00379BF0 /* BreakFastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5559CFC1CC8AB9D00379BF0 /* BreakFastViewController.m */; };
@@ -107,6 +109,9 @@
 		F54BE89B1CC9B65E00C3FF67 /* IndexThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexThirdCell.h; sourceTree = "<group>"; };
 		F54BE89C1CC9B65E00C3FF67 /* IndexThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexThirdCell.m; sourceTree = "<group>"; };
 		F54BE89D1CC9B65E00C3FF67 /* IndexThirdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexThirdCell.xib; sourceTree = "<group>"; };
+		F54BE8A11CC9D14900C3FF67 /* searchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchCell.h; sourceTree = "<group>"; };
+		F54BE8A21CC9D14900C3FF67 /* searchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchCell.m; sourceTree = "<group>"; };
+		F54BE8A31CC9D14900C3FF67 /* searchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchCell.xib; sourceTree = "<group>"; };
 		F5559CF61CC8AB8E00379BF0 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		F5559CF71CC8AB8E00379BF0 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		F5559CF81CC8AB8E00379BF0 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
@@ -296,6 +301,16 @@
 				F54BE89D1CC9B65E00C3FF67 /* IndexThirdCell.xib */,
 			);
 			name = IndexThirdCell;
+			sourceTree = "<group>";
+		};
+		F54BE8A01CC9D12C00C3FF67 /* searchCell */ = {
+			isa = PBXGroup;
+			children = (
+				F54BE8A11CC9D14900C3FF67 /* searchCell.h */,
+				F54BE8A21CC9D14900C3FF67 /* searchCell.m */,
+				F54BE8A31CC9D14900C3FF67 /* searchCell.xib */,
+			);
+			path = searchCell;
 			sourceTree = "<group>";
 		};
 		F5559D051CC8B4C200379BF0 /* CustomSearchBar */ = {
@@ -540,6 +555,7 @@
 		F5D97C4D1CC7AC2B0034099A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F54BE8A01CC9D12C00C3FF67 /* searchCell */,
 				F5D97C501CC7ACAB0034099A /* SearchViewController.h */,
 				F5D97C511CC7ACAB0034099A /* SearchViewController.m */,
 				F5D97C521CC7ACAB0034099A /* SearchViewController.xib */,
@@ -686,6 +702,7 @@
 				F5B289E51CC4F7B400ECF016 /* LaunchScreen.storyboard in Resources */,
 				F5559D041CC8ABB200379BF0 /* MineViewController.xib in Resources */,
 				F5559CFF1CC8AB9D00379BF0 /* BreakFastViewController.xib in Resources */,
+				F54BE8A51CC9D14900C3FF67 /* searchCell.xib in Resources */,
 				F5B28A2D1CC525BB00ECF016 /* DDCollectCell.xib in Resources */,
 				F5B28A271CC5253E00ECF016 /* Images.xcassets in Resources */,
 				F54BE89A1CC9B64F00C3FF67 /* IndexSecondCell.xib in Resources */,
@@ -790,6 +807,7 @@
 				7513E4131CC8BA3A00E0DC97 /* SmRoundView.m in Sources */,
 				F5559CF91CC8AB8E00379BF0 /* TimerViewController.m in Sources */,
 				F52BB8DE1CC65797000B8577 /* DayDescriptionData.m in Sources */,
+				F54BE8A41CC9D14900C3FF67 /* searchCell.m in Sources */,
 				F54BE8941CC9B13700C3FF67 /* IndexFirstCell.m in Sources */,
 				F52BB8C81CC6115A000B8577 /* NETManager.m in Sources */,
 				F52BB8BE1CC5CAFB000B8577 /* DDPushList.m in Sources */,

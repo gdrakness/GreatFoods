@@ -18,7 +18,6 @@
 #import <UIScrollView+JElasticPullToRefresh.h>
 @interface DaydayHome () <UICollectionViewDataSource,UICollectionViewDelegate>
 {
-    NSInteger isRefreshCount;//记录刷新次数
     DDPushList *PushListView;//导航菜单
     
     UIButton *backtoTop;
@@ -30,13 +29,13 @@
 
 @implementation DaydayHome
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    
-    #pragma mark- 刷新条 JELasticRefresh
+#pragma mark- 刷新条 JELasticRefresh
     
     JElasticPullToRefreshLoadingViewCircle *loadCircle = [JElasticPullToRefreshLoadingViewCircle new];
     loadCircle.tintColor = selectColor;//圈圈颜色
@@ -65,15 +64,8 @@
      */
     
     self.title = @"DayDayCook";
+
     
-}
-
-
-
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
     
     /**
      *  @author 夏浩文
@@ -85,7 +77,10 @@
     self.DaydayCollecionView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_DaydayCollecionView];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     [self DayDayCookHomeDataIFRefresh:NO];
     
     self.DaydayCollecionView.delegate = self;
@@ -104,11 +99,6 @@
 }
 
 
-
-#pragma mark- 记录可见cell数量(自动下拉刷新cell)
--(void)viewDidAppear:(BOOL)animated{
-    isRefreshCount = self.DaydayCollecionView.visibleCells.count;
-}
 
 
 
@@ -170,7 +160,7 @@
     /*  */
 //    NSLog(@"%f = %lu",scrollView.contentOffset.y / 180,self.DDdataArray.count - 5 );
     if (scrollView.contentOffset.y / 180  > self.DDdataArray.count - 10 ) {
-        #pragma mark- 异步请求数据(节省性能,很多)
+        #pragma mark- 异步请求数据
         dispatch_async(dispatch_queue_create("new", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
             
             [self DayDayCookHomeDataIFRefresh:YES];
@@ -392,12 +382,12 @@
 
 -(void) totop:(UIButton *)sender
 {
-    if (sender.tag == 0) {
-        [self.DaydayCollecionView setContentOffset:CGPointZero animated:NO]; //无动画
-    }else{
-        
+//    if (sender.tag == 0) {
+//        [self.DaydayCollecionView setContentOffset:CGPointZero animated:NO]; //无动画
+//    }else{
+    
         [self.DaydayCollecionView setContentOffset:CGPointZero animated:YES]; //1有动画
-    }
+//    }
     //置顶后按钮消失
     [UIView animateWithDuration:.5 animations:^{
         backtoTop.alpha = 0;

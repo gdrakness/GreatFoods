@@ -2,7 +2,7 @@
 //  CustomSearchBar.h
 //  CustomSearchBarDemo
 //
-//  Created by 王春平 on 16/3/8.
+//  Created by 夏浩文 on 16/3/8.
 //  Copyright © 2016年 wang. All rights reserved.
 //
 
