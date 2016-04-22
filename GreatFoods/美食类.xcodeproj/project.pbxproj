@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB117451CC9CFB600CA4AD4 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB117441CC9CFB600CA4AD4 /* List.m */; };
 		7513E4101CC8BA1500E0DC97 /* BigRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */; };
 		7513E4131CC8BA3A00E0DC97 /* SmRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */; };
 		7513E4161CC8BA8A00E0DC97 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4151CC8BA8A00E0DC97 /* PointView.m */; };
@@ -74,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FB117431CC9CFB600CA4AD4 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		3FB117441CC9CFB600CA4AD4 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		62FA1D13F8A65EDB1A6DC6B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7513E40E1CC8BA1500E0DC97 /* BigRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigRoundView.h; sourceTree = "<group>"; };
 		7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigRoundView.m; sourceTree = "<group>"; };
@@ -187,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD9F55F1CC9C29A0064990D /* BreakfastModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FB117431CC9CFB600CA4AD4 /* List.h */,
+				3FB117441CC9CFB600CA4AD4 /* List.m */,
+			);
+			path = BreakfastModel;
+			sourceTree = "<group>";
+		};
 		97B6E1F6B9B5147195431229 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,8 +539,9 @@
 		F5D97C4A1CC7ABD80034099A /* SecondBreakFast */ = {
 			isa = PBXGroup;
 			children = (
-				F5D97C4B1CC7ABF00034099A /* ViewController */,
+				3FD9F55F1CC9C29A0064990D /* BreakfastModel */,
 				F54BE88C1CC9B07F00C3FF67 /* breakfastCell */,
+				F5D97C4B1CC7ABF00034099A /* ViewController */,
 			);
 			path = SecondBreakFast;
 			sourceTree = "<group>";
@@ -798,6 +811,7 @@
 				F5559D031CC8ABB200379BF0 /* MineViewController.m in Sources */,
 				F5B28A171CC4FED100ECF016 /* DaydayHome.m in Sources */,
 				F5D97C581CC7B3840034099A /* Loading.m in Sources */,
+				3FB117451CC9CFB600CA4AD4 /* List.m in Sources */,
 				F54BE89E1CC9B65E00C3FF67 /* IndexThirdCell.m in Sources */,
 				F5559D0B1CC8B4E300379BF0 /* UIView+ModifyAttributeValue.m in Sources */,
 				F5B28A0E1CC4F89300ECF016 /* ViewController.m in Sources */,
@@ -949,7 +963,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/natsuhirofumi/Desktop/GitHub/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Documents/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -968,7 +982,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/natsuhirofumi/Desktop/GitHub/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Documents/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -984,6 +998,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "美食类Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hawin.---Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -996,6 +1011,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "美食类Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hawin.---Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1007,6 +1023,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "美食类UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hawin.---UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1019,6 +1036,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "美食类UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hawin.---UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

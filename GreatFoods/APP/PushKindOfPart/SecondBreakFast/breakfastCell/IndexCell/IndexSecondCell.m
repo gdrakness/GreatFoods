@@ -8,17 +8,36 @@
 
 #import "IndexSecondCell.h"
 
-
+#import <UIImageView+WebCache.h>
+#import "UIImage+Extended.h"
 @interface IndexSecondCell ()
 
     // your IB
 
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end
 
 
 @implementation IndexSecondCell
+
+
+-(void)Get:(List *)model{
+    [self.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://pic.ecook.cn/web/%@.jpg!m720",model.imageid]]];
+    self.title.text = model.name;
+    
+    
+    
+    
+    
+    
+    //裁剪
+    self.image.image = [UIImage RecompressedImageFromImage:self.image.image];
+
+    
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -29,5 +48,9 @@
 
     // Configure the view for the selected state
 }
+
+
+
+
 
 @end

@@ -9,7 +9,7 @@
 #import "DDPushList.h"
 #import "SearchViewController.h"
 #import "TimerViewController.h"
-
+#import "BreakFastViewController.h"
 #import "MineViewController.h"
 @implementation DDPushList
 
@@ -29,7 +29,8 @@
     [[self viewController].navigationController pushViewController:timerVc animated:YES];
 }
 - (IBAction)breakfast:(UIButton *)sender {
-    
+    BreakFastViewController *breakFast = [BreakFastViewController new];
+    [[self viewController].navigationController pushViewController:breakFast animated:YES];
 }
 - (IBAction)search:(UIButton *)sender {
     SearchViewController *search = [SearchViewController new];

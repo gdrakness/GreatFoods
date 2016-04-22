@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class List;
 
 @interface IndexFirstCell : UITableViewCell
 
-
-
 //model
+-(void)getModel:(List *)one ModelTwo:(List *)two ModelThree:(List *)three;
 
 @end

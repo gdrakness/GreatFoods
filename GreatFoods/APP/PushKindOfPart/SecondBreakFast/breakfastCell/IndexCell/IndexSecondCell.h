@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "List.h"
 
 @interface IndexSecondCell : UITableViewCell
+
+
+-(void)Get:(List *)model;
 
 @end

@@ -24,7 +24,7 @@
 +(UIImage *)RecompressedImageFromImage:(UIImage *)file
 {
     UIImage *image = [file copy];
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+    UIGraphicsBeginImageContextWithOptions(image.size, YES, 0);
     [image drawAtPoint:CGPointZero];
     
     UIImage *decompressedImage = UIGraphicsGetImageFromCurrentImageContext();

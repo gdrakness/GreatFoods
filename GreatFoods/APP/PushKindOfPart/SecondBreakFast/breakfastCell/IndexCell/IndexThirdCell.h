@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+#import "List.h"
 @interface IndexThirdCell : UITableViewCell
+
+
+-(void)Get:(List *)one two:(List *)two three:(List *)three four:(List *)four five:(List *)five;
 
 @end
