@@ -79,11 +79,8 @@
 		3FB117431CC9CFB600CA4AD4 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		3FB117441CC9CFB600CA4AD4 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		62FA1D13F8A65EDB1A6DC6B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7513E40E1CC8BA1500E0DC97 /* BigRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigRoundView.h; sourceTree = "<group>"; };
 		7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigRoundView.m; sourceTree = "<group>"; };
-		7513E4111CC8BA3A00E0DC97 /* SmRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmRoundView.h; sourceTree = "<group>"; };
 		7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmRoundView.m; sourceTree = "<group>"; };
-		7513E4141CC8BA8A00E0DC97 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
 		7513E4151CC8BA8A00E0DC97 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
 		759047E81CC9C5B700559B74 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		759047E91CC9C5B700559B74 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
@@ -193,7 +190,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
 		3FD9F55F1CC9C29A0064990D /* BreakfastModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,7 +515,6 @@
 		F5D97C481CC7ABAB0034099A /* FirstTimer */ = {
 			isa = PBXGroup;
 			children = (
-				759047E71CC9C55D00559B74 /* View */,
 				F5D97C491CC7ABC30034099A /* ViewController */,
 				759047E81CC9C5B700559B74 /* Timer.h */,
 				759047E91CC9C5B700559B74 /* Timer.m */,
@@ -970,7 +965,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lan/Documents/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lynsea/Desktop/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -989,7 +984,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lan/Documents/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lynsea/Desktop/GreatFoods/GreatFoods/Tools/Prefix/PrefixHeader.pch;
 				INFOPLIST_FILE = "美食类/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
