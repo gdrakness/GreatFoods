@@ -8,9 +8,19 @@
 
 #import "DDPushList.h"
 #import "SearchViewController.h"
+
 #import "TimerViewController.h"
 #import "BreakFastViewController.h"
 #import "MineViewController.h"
+
+
+@interface DDPushList ()
+
+
+
+@end
+
+
 @implementation DDPushList
 
 /*
@@ -20,13 +30,13 @@
     // Drawing code
 }
 */
--(void)awakeFromNib{
 
-}
+
+
 
 - (IBAction)Time:(UIButton *)sender {
-    TimerViewController *timerVc = [[TimerViewController alloc]init];
-    [[self viewController].navigationController pushViewController:timerVc animated:YES];
+    
+    [[self viewController].navigationController pushViewController:_timerVc animated:YES];
 }
 - (IBAction)breakfast:(UIButton *)sender {
     BreakFastViewController *breakFast = [BreakFastViewController new];
@@ -43,6 +53,8 @@
 
 
 - (UIViewController*)viewController {
+    
+   
     
     for (UIView* next = [self superview]; next; next = next.superview) {
         UIResponder* nextResponder = [next nextResponder];

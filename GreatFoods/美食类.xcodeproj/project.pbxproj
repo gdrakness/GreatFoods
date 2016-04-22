@@ -11,6 +11,7 @@
 		7513E4101CC8BA1500E0DC97 /* BigRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */; };
 		7513E4131CC8BA3A00E0DC97 /* SmRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */; };
 		7513E4161CC8BA8A00E0DC97 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7513E4151CC8BA8A00E0DC97 /* PointView.m */; };
+		759047EA1CC9C5B700559B74 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 759047E91CC9C5B700559B74 /* Timer.m */; };
 		9E0CB5236EE33452699E17B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34D67C062B50611E9D9154 /* libPods.a */; };
 		F52BB8BE1CC5CAFB000B8577 /* DDPushList.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BB8BD1CC5CAFB000B8577 /* DDPushList.m */; };
 		F52BB8C01CC5CB0F000B8577 /* DDPushList.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52BB8BF1CC5CB0F000B8577 /* DDPushList.xib */; };
@@ -84,6 +85,8 @@
 		7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmRoundView.m; sourceTree = "<group>"; };
 		7513E4141CC8BA8A00E0DC97 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
 		7513E4151CC8BA8A00E0DC97 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
+		759047E81CC9C5B700559B74 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		759047E91CC9C5B700559B74 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		9333AF356A4D342A18C9BA64 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ED34D67C062B50611E9D9154 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52BB8BC1CC5CAFB000B8577 /* DDPushList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPushList.h; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
 		3FD9F55F1CC9C29A0064990D /* BreakfastModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,13 +519,10 @@
 		F5D97C481CC7ABAB0034099A /* FirstTimer */ = {
 			isa = PBXGroup;
 			children = (
+				759047E71CC9C55D00559B74 /* View */,
 				F5D97C491CC7ABC30034099A /* ViewController */,
-				7513E40E1CC8BA1500E0DC97 /* BigRoundView.h */,
-				7513E40F1CC8BA1500E0DC97 /* BigRoundView.m */,
-				7513E4111CC8BA3A00E0DC97 /* SmRoundView.h */,
-				7513E4121CC8BA3A00E0DC97 /* SmRoundView.m */,
-				7513E4141CC8BA8A00E0DC97 /* PointView.h */,
-				7513E4151CC8BA8A00E0DC97 /* PointView.m */,
+				759047E81CC9C5B700559B74 /* Timer.h */,
+				759047E91CC9C5B700559B74 /* Timer.m */,
 			);
 			path = FirstTimer;
 			sourceTree = "<group>";
@@ -673,7 +674,12 @@
 				TargetAttributes = {
 					F5B289D11CC4F7B400ECF016 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 5AWV6U89AL;
+						DevelopmentTeam = 364PR47FE6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F5B289EA1CC4F7B400ECF016 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -827,6 +833,7 @@
 				F52BB8BE1CC5CAFB000B8577 /* DDPushList.m in Sources */,
 				F5B289DA1CC4F7B400ECF016 /* AppDelegate.m in Sources */,
 				F5B289D71CC4F7B400ECF016 /* main.m in Sources */,
+				759047EA1CC9C5B700559B74 /* Timer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

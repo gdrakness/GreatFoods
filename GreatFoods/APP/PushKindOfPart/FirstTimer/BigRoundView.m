@@ -26,6 +26,11 @@
     // clockwise:YES:顺时针 NO：逆时针
     
     // 扇形
+    
+    
+    
+    
+    //  画最外层的半透明线 和内层的半透明线
     CGPoint center = CGPointMake(150, 150);
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:100 startAngle:-M_PI endAngle:M_PI clockwise:YES];
     UIBezierPath *path1 = [UIBezierPath bezierPathWithArcCenter:center radius:125 startAngle:-M_PI endAngle:M_PI clockwise:YES];//     添加一根线到圆心

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimerViewController.h"
 
 @interface DDPushList : UIView
 
@@ -14,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *BreakFast;
 @property (weak, nonatomic) IBOutlet UIButton *Search;
 @property (weak, nonatomic) IBOutlet UIButton *Mine;
-
+@property(nonatomic,retain)TimerViewController *timerVc;
 
 @end

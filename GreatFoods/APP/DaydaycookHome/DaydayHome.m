@@ -12,6 +12,7 @@
 #import "DDPushList.h"
 #import "DaydayCookDescription.h"
 #import "DDCLoopLayout.h"
+#import "TimerViewController.h"
 
 #import <AFNetworking.h>
 #import <UIView+SDAutoLayout.h>
@@ -210,6 +211,7 @@
 #pragma mark- 菜单推出导航页面
 - (void)buildPushListView{
     PushListView = [[[NSBundle mainBundle]loadNibNamed:@"DDPushList" owner:self options:nil] lastObject];
+    PushListView.timerVc = [[TimerViewController alloc] init];
     [PushListView setFrame:CGRectMake(0, screen_height, screen_width, 170)];
     
     [self.view addSubview:PushListView];

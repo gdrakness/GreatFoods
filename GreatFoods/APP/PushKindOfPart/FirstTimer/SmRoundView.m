@@ -23,7 +23,12 @@ NSInteger count;
     // Drawing code
 }
 */
+-(void)awakeFromNib{
+    count = 0 ;
 
+    
+    
+}
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 //    WHC_NavigationController *nav = (WHC_NavigationController*)[self viewController].navigationController;
@@ -82,11 +87,17 @@ NSInteger count;
     
     return [super hitTest:point withEvent:event];
 }
+
+//重写外圆进度条
 -(void)setProgress:(CGFloat)progress{
     _progress = progress;
+    
+//    NSLog(@"%f",_progress);
     [self setNeedsDisplay];
 }
 
+
+//重写内圆进度条
 -(void)setMinProgress:(CGFloat)minProgress{
     _minProgress = minProgress;
     
@@ -131,7 +142,7 @@ NSInteger count;
     
     CGFloat btnW = 2 * M_PI * 100 /60;
     
-    
+
     if (count == 0) {
         
         _btnArray = [[NSMutableArray alloc]init];
