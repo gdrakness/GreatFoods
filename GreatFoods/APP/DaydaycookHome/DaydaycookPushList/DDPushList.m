@@ -9,6 +9,8 @@
 #import "DDPushList.h"
 #import "SearchViewController.h"
 #import "TimerViewController.h"
+
+#import "MineViewController.h"
 @implementation DDPushList
 
 /*
@@ -34,7 +36,8 @@
     [[self viewController].navigationController pushViewController:search animated:YES];
 }
 - (IBAction)mine:(UIButton *)sender {
-    
+    MineViewController *mine = [MineViewController new];
+    [[self viewController].navigationController pushViewController:mine animated:YES];
 }
 
 

@@ -8,7 +8,10 @@
 
 #import "MineViewController.h"
 
-@interface MineViewController ()
+@interface MineViewController () <UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+
 
 @end
 
@@ -16,8 +19,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //
+
+    
+    [self buildTableViewHead];
+    
+    
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellid = @"mine";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+    }
+    
+    cell.textLabel.text = @"New York";
+    
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark- 添加透视图 图片
+
+- (void)buildTableViewHead
+{
+    UIImage *image = [UIImage imageNamed:@"background-1"];
+    
+    UIImageView *head = [UIImageView new];
+    
+    head.image = image;
+    
+    head.frame = CGRectMake(0, 0, screen_width, 250);
+    
+    head.contentMode = UIViewContentModeScaleAspectFill;
+    
+    
+    self.tableview.tableHeaderView = head;
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
